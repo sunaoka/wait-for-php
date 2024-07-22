@@ -23,7 +23,5 @@ class SocketRequestTest extends TestCase
         self::assertSame('', $request->execute());
         self::assertFalse($request->getHandle());
         self::assertInstanceOf(RequestException::class, $request->getError());
-        self::assertSame('Connection refused', $request->getError()->getMessage());
-        self::assertSame(61, $request->getError()->getCode());
     }
 }

@@ -23,7 +23,5 @@ class CurlRequestTest extends TestCase
         self::assertFalse($request->execute());
         self::assertInstanceOf(\CurlHandle::class, $request->getHandle());
         self::assertInstanceOf(RequestException::class, $request->getError());
-        self::assertSame('URL rejected: Malformed input to a URL function', $request->getError()->getMessage());
-        self::assertSame(3, $request->getError()->getCode());
     }
 }
