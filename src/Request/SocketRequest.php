@@ -48,7 +48,7 @@ class SocketRequest implements RequestInterface
 
     public function getError(): ?RequestException
     {
-        if (0 === $this->errorCode) {
+        if (false !== $this->handle) {
             return null;
         }
 
