@@ -12,7 +12,8 @@
     ],
     "require": {
         "php": ">=8.0",
-        "ext-curl": "*"
+        "ext-curl": "*",
+        "ext-sockets": "*"
     },
     "require-dev": {
         "mockery/mockery": "^1.6",
