@@ -12,7 +12,7 @@ class CurlRequestTest extends TestCase
 {
     public function testRequest(): void
     {
-        $request = new CurlRequest('https://example.com', []);
+        $request = new CurlRequest('https://github.com', []);
 
         self::assertNotEmpty($request->execute());
         self::assertInstanceOf(\CurlHandle::class, $request->getHandle());
