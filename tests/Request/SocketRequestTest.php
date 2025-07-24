@@ -12,7 +12,7 @@ class SocketRequestTest extends TestCase
 {
     public function testRequest(): void
     {
-        $request = new SocketRequest('example.com', 80);
+        $request = new SocketRequest('github.com', 443);
 
         self::assertSame('', $request->execute());
         self::assertIsResource($request->getHandle());
