@@ -18,7 +18,7 @@ class MockSocketRequest implements RequestInterface
     public function __construct(
         private false|string $result,
         private ?RequestException $requestException = null,
-        private $handle = false
+        private $handle = false,
     ) {
     }
 
