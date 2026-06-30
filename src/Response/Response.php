@@ -10,7 +10,7 @@ class Response implements ResponseInterface
 {
     public function __construct(
         private false|string $result,
-        private ?RequestException $exception
+        private ?RequestException $exception,
     ) {
     }
 

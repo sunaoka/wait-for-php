@@ -15,7 +15,7 @@ class MockCurlRequest implements RequestInterface
     public function __construct(
         private false|string $result,
         private ?RequestException $requestException = null,
-        private ?\CurlHandle $handle = null
+        private ?\CurlHandle $handle = null,
     ) {
     }
 

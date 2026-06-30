@@ -25,7 +25,7 @@ class CurlRequest implements RequestInterface
 
     public function __destruct()
     {
-        curl_close($this->handle);
+        unset($this->handle);
     }
 
     public function getHandle(): \CurlHandle

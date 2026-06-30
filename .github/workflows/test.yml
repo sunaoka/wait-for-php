@@ -11,14 +11,14 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     env:
-      latest_php: 8.3
+      latest_php: 8.5
 
     strategy:
       fail-fast: false
       matrix:
         os: [ ubuntu-latest ]
         php: [
-          '8.0', '8.1', '8.2', '8.3', '8.4'
+          '8.0', '8.1', '8.2', '8.3', '8.4', '8.5'
         ]
 
     name: PHP ${{ matrix.php }}
@@ -30,7 +30,7 @@ jobs:
           php-version: ${{ matrix.php }}
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Install dependencies
         run: composer install --no-ansi --prefer-dist --no-progress --no-interaction
@@ -42,7 +42,7 @@ jobs:
         run: vendor/bin/phpunit --coverage-clover=coverage.xml
 
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v6
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ./coverage.xml
